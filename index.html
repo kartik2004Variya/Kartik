@@ -4,11 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Variya Kartik - Web Developer Portfolio</title>
+    <meta name="description" content="Variya Kartik is a result-oriented Web Developer with 1.5+ years of experience specializing in full-stack development, Laravel, PHP, APIs, and server management.">
+    <meta name="keywords" content="Variya Kartik, Web Developer, Full Stack Developer, Laravel Developer, PHP, Portfolio">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader-content">
+            <div class="loader-logo">VK</div>
+            <div class="loader-ring"></div>
+            <span class="loader-text">Loading Portfolio</span>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -45,7 +63,9 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-bg"></div>
+        <div class="hero-bg">
+            <canvas id="hero-canvas"></canvas>
+        </div>
         <div class="hero-overlay"></div>
         <div class="hero-container">
             <div class="hero-content">
@@ -138,23 +158,23 @@
                 <div class="skill-category">
                     <h3>Frontend & Core</h3>
                     <div class="skill-items">
-                        <div class="skill-item">
+                        <div class="skill-item" data-brand="html5">
                             <i class="fab fa-html5" style="color: #e34c26;"></i>
                             <span>HTML5</span>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item" data-brand="css3">
                             <i class="fab fa-css3-alt" style="color: #264de4;"></i>
                             <span>CSS3</span>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item" data-brand="javascript">
                             <i class="fab fa-js-square" style="color: #f7df1e;"></i>
                             <span>JavaScript</span>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item" data-brand="bootstrap">
                             <i class="fab fa-bootstrap" style="color: #7952b3;"></i>
                             <span>Bootstrap</span>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item" data-brand="responsive">
                             <i class="fas fa-mobile-alt" style="color: #10b981;"></i>
                             <span>Responsive</span>
                         </div>
@@ -165,23 +185,23 @@
                 <div class="skill-category">
                     <h3>Backend & Systems</h3>
                     <div class="skill-items">
-                        <div class="skill-item">
+                        <div class="skill-item" data-brand="php">
                             <i class="fab fa-php" style="color: #777bb4;"></i>
                             <span>PHP</span>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item" data-brand="laravel">
                             <i class="fab fa-laravel" style="color: #ff2d20;"></i>
                             <span>Laravel</span>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item" data-brand="codeigniter">
                             <i class="fas fa-fire" style="color: #dd4814;"></i>
                             <span>CodeIgniter</span>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item" data-brand="mysql">
                             <i class="fas fa-database" style="color: #00758f;"></i>
                             <span>MySQL</span>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item" data-brand="apis">
                             <i class="fas fa-project-diagram" style="color: #6366f1;"></i>
                             <span>REST APIs</span>
                         </div>
@@ -192,23 +212,23 @@
                 <div class="skill-category">
                     <h3>Servers & Operations</h3>
                     <div class="skill-items">
-                        <div class="skill-item">
+                        <div class="skill-item" data-brand="cpanel">
                             <i class="fas fa-server" style="color: #ff6600;"></i>
                             <span>cPanel</span>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item" data-brand="hostinger">
                             <i class="fas fa-cloud-upload-alt" style="color: #3b82f6;"></i>
                             <span>Hostinger</span>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item" data-brand="siteground">
                             <i class="fas fa-shield-alt" style="color: #2e7d32;"></i>
                             <span>SiteGround</span>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item" data-brand="client">
                             <i class="fas fa-users" style="color: #8b5cf6;"></i>
                             <span>Client Demo</span>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item" data-brand="whatsapp">
                             <i class="fab fa-whatsapp" style="color: #25d366;"></i>
                             <span>WhatsApp API</span>
                         </div>
@@ -219,23 +239,23 @@
                 <div class="skill-category">
                     <h3>AI & Tools</h3>
                     <div class="skill-items">
-                        <div class="skill-item">
+                        <div class="skill-item" data-brand="cursor">
                             <i class="fas fa-robot" style="color: #00bcd4;"></i>
                             <span>Cursor AI</span>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item" data-brand="antigravity">
                             <i class="fas fa-brain" style="color: #ec4899;"></i>
                             <span>Antigravity</span>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item" data-brand="git">
                             <i class="fab fa-git-alt" style="color: #f1502f;"></i>
                             <span>Git</span>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item" data-brand="github">
                             <i class="fab fa-github" style="color: #181717;"></i>
                             <span>GitHub</span>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item" data-brand="vscode">
                             <i class="fas fa-code" style="color: #007acc;"></i>
                             <span>VS Code</span>
                         </div>
@@ -250,6 +270,7 @@
         <div class="container">
             <h2 class="section-title">Professional Experience</h2>
             <div class="experience-timeline">
+                <div class="timeline-fill"></div>
                 <div class="timeline-item">
                     <div class="timeline-badge">
                         <i class="fas fa-briefcase"></i>
@@ -295,10 +316,19 @@
     <section id="projects" class="projects">
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
+            
+            <!-- Project Filter Tabs -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="laravel">Laravel & PHP</button>
+                <button class="filter-btn" data-filter="apis">APIs & Integrations</button>
+                <button class="filter-btn" data-filter="systems">Systems & Management</button>
+            </div>
+
             <div class="projects-grid">
                 
                 <!-- Project 1: Workora -->
-                <div class="project-card">
+                <div class="project-card" data-category="laravel systems">
                     <div class="project-image" style="background: linear-gradient(135deg, #4f46e5, #06b6d4);">
                         <div class="project-placeholder">
                             <i class="fas fa-tasks"></i>
@@ -318,7 +348,7 @@
                 </div>
 
                 <!-- Project 2: WA2 (WhatsApp Official API) -->
-                <div class="project-card">
+                <div class="project-card" data-category="laravel apis">
                     <div class="project-image" style="background: linear-gradient(135deg, #10b981, #059669);">
                         <div class="project-placeholder">
                             <i class="fab fa-whatsapp"></i>
@@ -338,7 +368,7 @@
                 </div>
 
                 <!-- Project 3: Bizmandate.com -->
-                <div class="project-card">
+                <div class="project-card" data-category="laravel systems">
                     <div class="project-image" style="background: linear-gradient(135deg, #3b82f6, #1d4ed8);">
                         <div class="project-placeholder">
                             <i class="fas fa-chart-line"></i>
@@ -358,7 +388,7 @@
                 </div>
 
                 <!-- Project 4: Nexus -->
-                <div class="project-card">
+                <div class="project-card" data-category="apis">
                     <div class="project-image" style="background: linear-gradient(135deg, #8b5cf6, #ec4899);">
                         <div class="project-placeholder">
                             <i class="fas fa-network-wired"></i>
@@ -378,7 +408,7 @@
                 </div>
 
                 <!-- Project 5: Unique World Placement -->
-                <div class="project-card">
+                <div class="project-card" data-category="laravel systems">
                     <div class="project-image" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
                         <div class="project-placeholder">
                             <i class="fas fa-user-tie"></i>
@@ -398,7 +428,7 @@
                 </div>
 
                 <!-- Project 6: Todo App -->
-                <div class="project-card">
+                <div class="project-card" data-category="systems">
                     <div class="project-image" style="background: linear-gradient(135deg, #6366f1, #312e81);">
                         <div class="project-placeholder">
                             <i class="fas fa-check-square"></i>
@@ -418,7 +448,7 @@
                 </div>
 
                 <!-- Project 7: Prudent -->
-                <div class="project-card">
+                <div class="project-card" data-category="laravel systems">
                     <div class="project-image" style="background: linear-gradient(135deg, #6b7280, #374151);">
                         <div class="project-placeholder">
                             <i class="fas fa-project-diagram"></i>
@@ -503,6 +533,21 @@
             <p>&copy; 2026 Variya Kartik. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" aria-label="Scroll to Top">
+        <svg class="progress-circle" width="48" height="48" viewBox="0 0 48 48">
+            <defs>
+                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#6366f1" />
+                    <stop offset="100%" stop-color="#06b6d4" />
+                </linearGradient>
+            </defs>
+            <circle class="progress-bg" cx="24" cy="24" r="20" />
+            <circle class="progress-bar" cx="24" cy="24" r="20" />
+        </svg>
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="script.js"></script>
 </body>
