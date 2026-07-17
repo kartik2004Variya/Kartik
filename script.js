@@ -77,7 +77,7 @@ const observer = new IntersectionObserver((entries) => {
 
 // Add fade-in class to elements and observe them
 document.addEventListener('DOMContentLoaded', () => {
-    const elementsToAnimate = document.querySelectorAll('.skill-category, .project-card, .about-text, .contact-info, .contact-form');
+    const elementsToAnimate = document.querySelectorAll('.skill-category, .project-card, .about-text, .education-card, .timeline-content, .contact-info, .contact-form');
     elementsToAnimate.forEach(el => {
         el.classList.add('fade-in');
         observer.observe(el);
